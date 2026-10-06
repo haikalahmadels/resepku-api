@@ -1,0 +1,170 @@
+[
+  {
+    "id": "recipe_001",
+    "name": "Nasi Goreng Spesial",
+    "image": "assets/images/recipes/nasi_goreng_spesial.jpg",
+    "category": "Olahan Nasi",
+    "cookingTimeMinutes": 20,
+    "rating": 4.5,
+    "ingredients": [
+      { "name": "Nasi putih", "amount": "2 piring" },
+      { "name": "Telur ayam", "amount": "2 butir" },
+      { "name": "Bawang merah", "amount": "3 siung" },
+      { "name": "Kecap manis", "amount": "2 sdm" }
+    ],
+    "steps": [
+      "Panaskan minyak, tumis bawang hingga harum",
+      "Masukkan telur, orak-arik hingga matang",
+      "Tambahkan nasi dan kecap, aduk rata",
+      "Sajikan selagi hangat"
+    ],
+    "uploader": {
+      "name": "Budi Santoso",
+      "profileImage": "assets/images/profiles/budi.jpg"
+    }
+  },
+  {
+    "id": "recipe_002",
+    "name": "Ayam Bakar Kecap",
+    "image": "assets/images/recipes/ayam_bakar_kecap.jpg",
+    "category": "Olahan Ayam",
+    "cookingTimeMinutes": 35,
+    "rating": 4.7,
+    "ingredients": [
+      { "name": "Ayam potong", "amount": "1/2 ekor" },
+      { "name": "Kecap manis", "amount": "5 sdm" },
+      { "name": "Bawang putih", "amount": "4 siung" },
+      { "name": "Jeruk nipis", "amount": "1 buah" }
+    ],
+    "steps": [
+      "Lumuri ayam dengan jeruk nipis, diamkan 10 menit",
+      "Haluskan bawang putih, campur dengan kecap manis",
+      "Marinasi ayam dengan bumbu selama 30 menit",
+      "Panggang ayam sambil sesekali diolesi bumbu hingga matang"
+    ],
+    "uploader": {
+      "name": "Siti Rahma",
+      "profileImage": "assets/images/profiles/siti.jpg"
+    }
+  },
+  {
+    "id": "recipe_003",
+    "name": "Pisang Goreng Crispy",
+    "image": "assets/images/recipes/pisang_goreng_crispy.jpg",
+    "category": "Cemilan",
+    "cookingTimeMinutes": 15,
+    "rating": 4.3,
+    "ingredients": [
+      { "name": "Pisang kepok", "amount": "5 buah" },
+      { "name": "Tepung beras", "amount": "150 gram" },
+      { "name": "Tepung terigu", "amount": "50 gram" },
+      { "name": "Air es", "amount": "150 ml" }
+    ],
+    "steps": [
+      "Campur tepung beras, tepung terigu, dan air es hingga jadi adonan",
+      "Belah pisang menjadi dua bagian memanjang",
+      "Celupkan pisang ke adonan tepung",
+      "Goreng dalam minyak panas hingga keemasan"
+    ],
+    "uploader": {
+      "name": "Rina Wulandari",
+      "profileImage": "assets/images/profiles/rina.jpg"
+    }
+  },
+  {
+    "id": "recipe_004",
+    "name": "Ikan Bakar Bumbu Kuning",
+    "image": "assets/images/recipes/ikan_bakar_bumbu_kuning.jpg",
+    "category": "Olahan Ikan",
+    "cookingTimeMinutes": 40,
+    "rating": 4.6,
+    "ingredients": [
+      { "name": "Ikan kembung", "amount": "2 ekor" },
+      { "name": "Kunyit", "amount": "2 ruas" },
+      { "name": "Serai", "amount": "2 batang" },
+      { "name": "Daun jeruk", "amount": "3 lembar" }
+    ],
+    "steps": [
+      "Bersihkan ikan, lumuri dengan air jeruk nipis dan garam",
+      "Haluskan kunyit, serai, dan bumbu lainnya",
+      "Lumuri ikan dengan bumbu halus, diamkan 20 menit",
+      "Bakar ikan hingga matang merata sambil dibolak-balik"
+    ],
+    "uploader": {
+      "name": "Agus Prasetyo",
+      "profileImage": "assets/images/profiles/agus.jpg"
+    }
+  },
+  {
+    "id": "recipe_005",
+    "name": "Es Teh Serai Segar",
+    "image": "assets/images/recipes/es_teh_serai.jpg",
+    "category": "Minuman",
+    "cookingTimeMinutes": 10,
+    "rating": 4.4,
+    "ingredients": [
+      { "name": "Teh celup", "amount": "2 kantong" },
+      { "name": "Serai", "amount": "1 batang, memarkan" },
+      { "name": "Gula pasir", "amount": "3 sdm" },
+      { "name": "Es batu", "amount": "secukupnya" }
+    ],
+    "steps": [
+      "Seduh teh dan serai dengan air panas selama 5 menit",
+      "Saring, lalu campurkan gula pasir, aduk hingga larut",
+      "Dinginkan di suhu ruang",
+      "Tuang ke gelas berisi es batu, sajikan"
+    ],
+    "uploader": {
+      "name": "Dewi Lestari",
+      "profileImage": "assets/images/profiles/dewi.jpg"
+    }
+  },
+  {
+    "id": "recipe_006",
+    "name": "Ayam Geprek Sambal Bawang",
+    "image": "assets/images/recipes/ayam_geprek.jpg",
+    "category": "Olahan Ayam",
+    "cookingTimeMinutes": 30,
+    "rating": 4.8,
+    "ingredients": [
+      { "name": "Ayam fillet", "amount": "300 gram" },
+      { "name": "Tepung bumbu kriuk", "amount": "100 gram" },
+      { "name": "Cabai rawit", "amount": "15 buah" },
+      { "name": "Bawang putih goreng", "amount": "5 siung" }
+    ],
+    "steps": [
+      "Lumuri ayam dengan tepung bumbu kriuk",
+      "Goreng ayam hingga matang dan renyah",
+      "Ulek cabai rawit dan bawang putih goreng dengan sedikit minyak panas",
+      "Geprek ayam bersama sambal, sajikan"
+    ],
+    "uploader": {
+      "name": "Budi Santoso",
+      "profileImage": "assets/images/profiles/budi.jpg"
+    }
+  },
+  {
+    "id": "recipe_007",
+    "name": "Keripik Tempe Renyah",
+    "image": "assets/images/recipes/keripik_tempe.jpg",
+    "category": "Cemilan",
+    "cookingTimeMinutes": 25,
+    "rating": 4.2,
+    "ingredients": [
+      { "name": "Tempe", "amount": "1 papan" },
+      { "name": "Tepung beras", "amount": "200 gram" },
+      { "name": "Ketumbar bubuk", "amount": "1 sdt" },
+      { "name": "Daun jeruk", "amount": "3 lembar, iris halus" }
+    ],
+    "steps": [
+      "Iris tempe tipis-tipis",
+      "Campur tepung beras dengan ketumbar dan daun jeruk, tambahkan air",
+      "Celupkan irisan tempe ke adonan tepung",
+      "Goreng dalam minyak panas hingga kering dan renyah"
+    ],
+    "uploader": {
+      "name": "Rina Wulandari",
+      "profileImage": "assets/images/profiles/rina.jpg"
+    }
+  }
+]
