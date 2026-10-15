@@ -1,59 +1,138 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Resepku API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+REST API dan database untuk aplikasi Flutter **Resepku**, aplikasi berbagi resep masakan.
+Dibangun dengan Laravel 12, MySQL, dan Laravel Sanctum untuk autentikasi token.
 
-## About Laravel
+## Anggota Kelompok
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+| No | Nama | NIM |
+|---|---|---|
+| 1 | NAMA_ANGGOTA_1 | NIM_1 |
+| 2 | NAMA_ANGGOTA_2 | NIM_2 |
+| 3 | NAMA_ANGGOTA_3 | NIM_3 |
+| 4 | NAMA_ANGGOTA_4 | NIM_4 |
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Fitur
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Registrasi, login, dan logout dengan token Bearer (Sanctum)
+- Profil pengguna: ubah data diri, foto profil, dan kata sandi
+- CRUD resep beserta bahan, langkah memasak, dan upload foto
+- Pencarian dan filter resep berdasarkan kategori, waktu masak, dan urutan
+- Favorit resep
+- Rating resep (1-5), rata-rata dihitung otomatis
+- Kategori dan banner untuk halaman beranda
 
-## Learning Laravel
+## Kebutuhan
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- PHP 8.2 atau lebih baru
+- Composer
+- MySQL / MariaDB (misalna lyewat Laragon atau XAMPP)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Instalasi
 
-## Laravel Sponsors
+```bash
+git clone https://github.com/<username>/resepku-api.git
+cd resepku-api
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+composer install
+cp .env.example .env
+php artisan key:generate
+```
 
-### Premium Partners
+Buat database kosong bernama `resepku` di MySQL, lalu sesuaikan bagian ini di `.env` bila perlu:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=resepku
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-## Contributing
+Jalankan migration, seeder, dan link folder penyimpanan gambar:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+php artisan migrate --seed
+php artisan storage:link
+```
 
-## Code of Conduct
+Untuk mengulang database dari awal: `php artisan migrate:fresh --seed`.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Menjalankan Server
 
-## Security Vulnerabilities
+```bash
+php artisan serve --host=0.0.0.0 --port=8000
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+API dapat diakses di `http://127.0.0.1:8000/api`.
 
-## License
+| Dijalankan dari | Base URL |
+|---|---|
+| Browser / Flutter Web | `http://127.0.0.1:8000/api` |
+| Emulator Android | `http://10.0.2.2:8000/api` |
+| HP fisik (satu jaringan Wi-Fi) | `http://<IP-laptop>:8000/api` |
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Pengguna Laragon juga bisa memakai `http://resepku-api.test/api` setelah menekan **Reload** di Laragon.
+
+### Akun Contoh
+
+Semua akun hasil seeder memakai kata sandi `password`:
+
+`sari.wulandari@email.com`, `budi@email.com`, `siti@email.com`, `rina@email.com`,
+`agus@email.com`, `dewi@email.com`
+
+## Struktur Database
+
+Script migration ada di [`database/migrations`](database/migrations), data awal di
+[`database/seeders`](database/seeders).
+
+| Tabel | Isi |
+|---|---|
+| `users` | Akun pengguna beserta profil (phone, address, birth_date, photo, avatar_index) |
+| `categories` | Kategori resep |
+| `recipes` | Resep: pemilik, kategori, nama, gambar, waktu masak, rating |
+| `recipe_ingredients` | Bahan tiap resep |
+| `recipe_steps` | Langkah memasak tiap resep |
+| `favorites` | Resep favorit pengguna |
+| `recipe_ratings` | Rating 1-5 dari pengguna untuk resep |
+| `banners` | Banner carousel di beranda |
+| `personal_access_tokens` | Token login Sanctum |
+
+## Daftar Endpoint
+
+Endpoint bertanda 🔒 membutuhkan header `Authorization: Bearer <token>` yang didapat dari `/api/login`.
+Semua request sebaiknya menyertakan header `Accept: application/json`.
+
+| Method | Endpoint | Keterangan |
+|---|---|---|
+| POST | `/api/register` | Daftar akun baru |
+| POST | `/api/login` | Login, mengembalikan token |
+| POST | `/api/logout` 🔒 | Logout |
+| GET | `/api/me` 🔒 | Profil dan statistik pengguna |
+| PUT | `/api/me` 🔒 | Ubah profil |
+| GET | `/api/me/recipes` 🔒 | Resep milik pengguna |
+| GET | `/api/categories` | Daftar kategori |
+| GET | `/api/banners` | Daftar banner beranda |
+| GET | `/api/recipes` | Daftar resep (filter: `category`, `search`, `max_time`, `sort`) |
+| GET | `/api/recipes/{id}` | Detail resep |
+| POST | `/api/recipes` 🔒 | Tambah resep |
+| PUT | `/api/recipes/{id}` 🔒 | Ubah resep (hanya pemilik) |
+| DELETE | `/api/recipes/{id}` 🔒 | Hapus resep (hanya pemilik) |
+| GET | `/api/favorites` 🔒 | Daftar resep favorit |
+| POST | `/api/recipes/{id}/favorite` 🔒 | Tambah ke favorit |
+| DELETE | `/api/recipes/{id}/favorite` 🔒 | Hapus dari favorit |
+| POST | `/api/recipes/{id}/rating` 🔒 | Beri rating 1-5 |
+
+Contoh body request, format respons, dan aturan validasi lengkap ada di [API.md](API.md).
+
+## Struktur Folder Penting
+
+```
+app/Http/Controllers/Api/   Controller REST API
+app/Models/                 Model Eloquent
+routes/api.php              Definisi endpoint
+database/migrations/        Script migration database
+database/seeders/           Data awal (kategori, resep, akun contoh)
+API.md                      Dokumentasi API lengkap
+```
