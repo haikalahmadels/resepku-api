@@ -7,10 +7,10 @@ Dibangun dengan Laravel 12, MySQL, dan Laravel Sanctum untuk autentikasi token.
 
 | No | Nama | NIM |
 |---|---|---|
-| 1 | NAMA_ANGGOTA_1 | NIM_1 |
-| 2 | NAMA_ANGGOTA_2 | NIM_2 |
-| 3 | NAMA_ANGGOTA_3 | NIM_3 |
-| 4 | NAMA_ANGGOTA_4 | NIM_4 |
+| 1 | Rafi Ramadhana Bukaryo | 24051214180 |
+| 2 | Danella Andritya Putri | 24051214205 |
+| 3 | Haikal Ahmad El Salman | 24051214207 |
+| 4 | Revo Novandra | 24051214211 |
 
 ## Fitur
 
